@@ -32,7 +32,7 @@ id,sex,age,height,weight,headband,college,tattoos,tchests,parrots,favorite.pirat
 31,male,22.0,196.69,91.7,no,CCCC,2,54,1,Jack Sparrow,cutlass,1,2.19,17,Monsters University,11
 32,male,22.0,181.95,79.4,yes,CCCC,15,6,2,Hook,cutlass,1,0.12,29,Monsters University,9
 33,male,31.0,190.02,90.5,yes,JSSFP,13,3,1,Jack Sparrow,cutlass,1,0.29,24,Inside Out,7
-34,female,0.0,162.6,61.0,yes,CCCC,13,15,6,Jack Sparrow,cutlass,1,1.26,0,"Monsters, Inc.",7
+34,female,27.35735735735736,162.6,61.0,yes,CCCC,13,15,6,Jack Sparrow,cutlass,1,1.26,0,"Monsters, Inc.",7
 35,male,23.0,178.24,75.1,yes,CCCC,17,2,1,Hook,cutlass,0,0.34,24,Brave,8
 36,female,18.0,163.09,63.3,yes,CCCC,9,14,0,Jack Sparrow,cutlass,0,0.14,0,Monsters University,9
 37,other,27.0,161.2,63.6,no,CCCC,0,3,"""1""",Lewis Scot,scimitar,1,8.48,3,A Bug's Life,8
@@ -135,7 +135,7 @@ id,sex,age,height,weight,headband,college,tattoos,tchests,parrots,favorite.pirat
 134,male,16.0,191.17,86.9,no,CCCC,5,27,3,Jack Sparrow,sabre,0,4.78,13,Finding Nemo,10
 135,female,34.0,167.86,67.9,yes,JSSFP,6,29,1,Jack Sparrow,cutlass,1,1.72,1,Toy Story,9
 136,male,22.0,185.72,77.5,yes,CCCC,12,4,2,Jack Sparrow,cutlass,0,0.7,24,Finding Nemo,6
-137,female,25.0,158.13,62.4,yes,CCCC,12,20,2,Blackbeard,cutlass,1,0.0,2,Cars 2,17
+137,female,25.0,158.13,62.4,yes,CCCC,12,20,2,Blackbeard,cutlass,1,2.545165165165167,2,Cars 2,17
 138,male,31.0,169.92,69.5,yes,JSSFP,12,3,14,Jack Sparrow,cutlass,0,0.1,18,A Bug's Life,8
 139,male,27.0,172.41,70.5,yes,CCCC,8,3,15,Jack Sparrow,cutlass,1,0.15,20,Inside Out,15
 140,male,30.0,170.09,68.9,yes,JSSFP,8,69,0,Jack Sparrow,cutlass,1,0.18,22,Monsters University,12
@@ -633,7 +633,7 @@ id,sex,age,height,weight,headband,college,tattoos,tchests,parrots,favorite.pirat
 632,male,11.0,174.6,69.6,yes,CCCC,17,1,1,Jack Sparrow,cutlass,0,1.34,22,The Incredibles,6
 633,male,30.0,163.83,67.5,yes,CCCC,10,4,4,Jack Sparrow,cutlass,0,0.07,23,Up,10
 634,male,31.0,166.96,66.9,yes,JSSFP,13,13,2,Jack Sparrow,cutlass,0,0.4,15,Finding Nemo,14
-635,male,13.0,168.38,62.9,yes,CCCC,15,4,2,0,cutlass,1,0.52,28,Toy Story 2,7
+635,male,13.0,168.38,62.9,yes,CCCC,15,4,2,Jack Sparrow,cutlass,1,0.52,28,Toy Story 2,7
 636,male,24.0,184.35,85.0,yes,CCCC,8,36,1,Jack Sparrow,cutlass,0,0.64,24,Finding Nemo,8
 637,other,23.0,168.94,60.2,yes,CCCC,15,12,4,Jack Sparrow,cutlass,0,0.73,31,Monsters University,14
 638,female,27.0,150.98,56.5,yes,CCCC,3,135,12,Edward Low,cutlass,1,0.05,0,Inside Out,5
@@ -998,4 +998,4 @@ id,sex,age,height,weight,headband,college,tattoos,tchests,parrots,favorite.pirat
 997,female,34.0,157.2,53.6,yes,JSSFP,13,48,2,Hook,cutlass,0,0.15,0,Finding Nemo,8
 998,male,36.0,175.74,72.4,yes,JSSFP,9,95,14,Jack Sparrow,cutlass,1,1.28,18,The Incredibles,11
 999,male,30.0,175.24,70.2,yes,JSSFP,9,6,0,Lewis Scot,cutlass,1,0.21,24,Inside Out,10
-1000,male,30.0,189.45,84.0,0,JSSFP,10,36,1,Jack Sparrow,cutlass,0,0.95,19,Up,14
+1000,male,30.0,189.45,84.0,yes,JSSFP,10,36,1,Jack Sparrow,cutlass,0,0.95,19,Up,14
