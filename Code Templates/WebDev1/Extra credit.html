@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style the buttons */
+        .nav-button {
+            background: none;
+            border: none;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        /* Style for the image */
+        .small-image {
+            width: 600px;
+            height: 450px;
+        }
+    </style>
+    <style>
+        /* Style for the image */
+        .medium-image {
+            width: 1200px;
+            height: 900px;
+        }
+    </style>
+    <style>
+        /* Centered Text */
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center; /* Optional: Center the text horizontally */
+        }
+    </style>
+    <style>
+        /* CSS for the specific heading */
+        h3.special-heading {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 content -->
+    <div id="page1" class="centered-text">
+        <h1>
+            HOLLYWOOD'S GENDER DIVIDE AND ITS EFFECT ON FILMS
+        </h1>
+        <h3 class="special-heading">
+            EXAMINING THE GENDER OF WRITERS, PORDUCERS AND DIRECTORS WHO MAKE FILMS THAT FAIL THE BECIDEL TEST
+        </h3>
+        <p>
+            There's this thing callled the Bechel Test. It meassures just how male-dominated our belove Netflix nights really are. To pass, films need to satisfy thre requirements:
+        </p>
+        <p>
+            <b>
+                1. I has at least two women in it
+            </b>
+        </p>
+        <p>
+            <b>
+                2. Who talk to each other, about
+            </b>
+        </p>
+        <p>
+            <b>
+                3. Something besides a man
+            </b>
+        </p>
+        <p>
+            It's a low bar, but good movies don't pass.
+            <i>
+                Birdman
+            </i>
+            fails.
+            <i>
+                Avatar
+            </i>
+            fails. Fucking
+            <i>
+                Toy Story fails.
+            </i>
+            On
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
+                bendeltest.com
+            </a>
+            , a site for crowdsourcing Bechdel Test results, about 
+            <b>
+                40%
+            </b>
+            of films don't pass. It's a sad state since women exist in life, like, half the timee.
+        </p>
+        <p>
+            Why? Rather than generalizing a sexist system. one theory is simple: filmakers, unintentionally, make movies about themselves (i.ee., write what you know). Since the most powerful producers, writers, and directors are men, male-themes permate into Hollywood's output. To see if women are more likely to write about women (i.e., pass the Bechdel test), we compiled the genders of the producers, writes, and directors on thousands of films.
+        </p>
+    </div>
+
+    <!-- Page 2 content (initially hidden) -->
+    <div id="page2" style="display: none;" class="centered-text">
+        <p>
+            <b>
+                #1
+            </b>
+            Film has at least two women in it
+            <b>
+                #2
+            </b>
+            Who talk to each other, about
+            <b>
+                # 3
+            </b>
+            Something besides a man. Box Office is inflation-adjusted and includes films 1995-2015*. Test results via
+            <u>
+                bendeltest.com
+            </u>
+            . More on
+            <u>
+                methodology here.
+            </u>
+        </p>
+        <img src="https://drive.google.com/uc?id=1cyNhyS8zlIcOH_uu2-5j_kKMxNZMZly8" class="medium-image">
+        <img src="https://drive.google.com/uc?id=1kif3xDDtyfUE4aWJw1ZSS-oiwyIc86ds" class="small-image">
+
+    </div>
+
+    <!-- Page 3 content (initially hidden) -->
+    <div id="page3" style="display: none;"class="centered-text">
+        <p>
+            Not done ;)
+        </p>
+    </div>
+
+    <!-- "Next Page" and "Back Page" buttons -->
+    <button class="nav-button" onclick="showPage(1)">READ MORE AND RAGE </button>
+    <button id="backButton" class="nav-button" style="display: none;" onclick="showPage(-1)">BACK</button>
+
+    <script>
+        let currentPage = 1;
+
+        function showPage(offset) {
+            const page1 = document.getElementById("page1");
+            const page2 = document.getElementById("page2");
+            const page3 = document.getElementById("page3");
+            const backButton = document.getElementById("backButton");
+
+            currentPage += offset;
+
+            if (currentPage === 1) {
+                page1.style.display = "block";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                backButton.style.display = "none";
+            } else if (currentPage === 2) {
+                page1.style.display = "none";
+                page2.style.display = "block";
+                page3.style.display = "none";
+                backButton.style.display = "block";
+            } else if (currentPage === 3) {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "block";
+                backButton.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

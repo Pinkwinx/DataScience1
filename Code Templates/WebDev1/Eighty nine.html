@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Style the buttons */
+        .nav-button {
+            background: none;
+            border: none;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+    <style>
+        /* Style for the image */
+        .small-image {
+            width: 600px;
+            height: 450px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1 content -->
+    <div id="page1">
+        <h1>
+            The Most Successful Labels in Hip Hop
+        </h1>
+        <h3>
+            Every hip hop record label, since 1989, sorted by their artist's chart performance on Billboard
+        </h3>
+        <h4>
+            <a href="https://twitter.com/MattD_Official">
+                Matt Daniels
+            </a>
+            ,
+            <a href="https://twitter.com/KevinBeacham">
+                Kevin Beacham
+            </a>
+            - Rhymesayers
+        </h4>
+        <p>
+            In hip hop, so much can be explained by the rise and fall of record labels.
+        </p>
+        <p>
+            Lil Wayne's ascent is the story of
+            <b>
+                Cash Money
+            </b>
+            . The Dirty South starts with
+            <b>
+                LaFace Records
+            </b>
+            . The east-coast/west-coast feud is
+            <b>
+                Bad Boy vs. Death Row
+            </b>
+            . In hip hop, the artist-label relationship isn't just a business deal, but a commitment to an identity.
+        </p>
+        <p>
+            We wanted to surface the notable labels in hip hop's history, so we measured every label by its artists' chart performance on Billboard (collaborating with
+            <a href="https://twitter.com/KevinBeacham">
+                Kevin Beacham
+            </a>
+            of
+            <a href="https://en.wikipedia.org/wiki/Rhymesayers_Entertainment">
+                Rhymesayers
+            </a>
+            to call out insights). By highlighting the labels who produced the most hits at any given time, we'd understand who was wielding enormous influence on hip hop's sound, distribution, and direction.
+        </p>
+    </div>
+
+    <!-- Page 2 content (initially hidden) -->
+    <div id="page2" style="display: none;">
+        <p>
+            Let's look at just 1989, the launch of Billboard's "Hot Rap Singles" chart:
+        </p>
+        <img src="https://drive.google.com/uc?id=1gdje3IxNG29xDPtAhpo2aS3F_KmKxrJ5" class="small-image">
+        <p>
+            In 1989, regional independent labels dominated with superstar signings: Young MC and the Pharcyde are signed to Delicious Vinyl. Biz Markie (Just a Friend), Big Daddy Kane (Smooth Operator), and Marley Marl were all on Cold Chillin'. Ruthless, Eazy E's label, had N.W.A. and The D.O.C. on its roster. Jive is crushing it with a roster that includes Boogie Down Productions, DJ Jazzy Jeff and the Fresh Prince, and Too $hort. And Tommy Boy presciently released both De La Soul and Queen Latifah's first albums.
+        </p>
+    </div>
+
+    <!-- Page 3 content (initially hidden) -->
+    <div id="page3" style="display: none;">
+        <p>
+            Let's warp to the mid-90s, when labels began to play new role in hip hop undder the tutelage of Puff Daddy with Bad Boy and Suge Knight/Dre with Death Row
+        </p>
+        <img src="https://drive.google.com/uc?id=1gdje3IxNG29xDPtAhpo2aS3F_KmKxrJ5" class="small-image">
+    </div>
+
+    <!-- "Next Page" and "Back Page" buttons -->
+    <button class="nav-button" onclick="showPage(1)">NEXT</button>
+    <button id="backButton" class="nav-button" style="display: none;" onclick="showPage(-1)">BACK</button>
+
+    <script>
+        let currentPage = 1;
+
+        function showPage(offset) {
+            const page1 = document.getElementById("page1");
+            const page2 = document.getElementById("page2");
+            const page3 = document.getElementById("page3");
+            const backButton = document.getElementById("backButton");
+
+            currentPage += offset;
+
+            if (currentPage === 1) {
+                page1.style.display = "block";
+                page2.style.display = "none";
+                page3.style.display = "none";
+                backButton.style.display = "none";
+            } else if (currentPage === 2) {
+                page1.style.display = "none";
+                page2.style.display = "block";
+                page3.style.display = "none";
+                backButton.style.display = "block";
+            } else if (currentPage === 3) {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "block";
+                backButton.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
