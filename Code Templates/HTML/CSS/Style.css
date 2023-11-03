@@ -1,3 +1,13 @@
-﻿body
-{
+﻿body {
+    width: 50%; /* Adjust the width as desired */
+    margin: 0 auto; /* This centers the element horizontally */
+    text-align: left; /* This aligns the content within the element to the left */
+    padding: 10px; /* Add padding to control spacing if needed */
+}
+header {
+    margin-top: 20vh;
+    font-family: 'Jost', sans-serif;
+}
+main {
+    font-family: 'Merriweather', sans-serif;
 }
