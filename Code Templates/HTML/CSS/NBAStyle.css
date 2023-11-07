@@ -1,12 +1,30 @@
 ﻿body {
     background-color: black;
 }
+
+.container {
+    display: flex;
+    align-items: center; /* Vertically align the content */
+}
+
+.left {
+    flex: 1; /* Take up the left side */
+    padding: 20px; /* Optional padding for spacing */
+}
+
+.right {
+    flex: 1; /* Take up the right side */
+    padding: 20px; /* Optional padding for spacing */
+}
+
 h1 {
     font-family: 'Fjalla One', sans-serif;
+    text-align: left;
     color: white;
 }
 
 p {
     font-family: 'Cantarell', sans-serif;
+    text-align: left;
     color: white;
 }

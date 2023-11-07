@@ -1,0 +1,29 @@
+﻿body {
+    background-color: midnightblue;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; 
+}
+.text-with-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text {
+    text-align: center;
+}
+
+.heading {
+    color: white;
+}
+.paragraph{
+    color: yellow;
+}
