@@ -1,3 +1,30 @@
-﻿body
-{
+﻿body {
+    color: white;
+    background-color: darkslateblue;
+    font-family: 'PT Sans', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+.green {
+    margin-top: 30vh;
+    margin-bottom: 1vh;
+    font-size: 40px;
+    color: springgreen;
+
+}
+.under {
+    margin-top: 1vh;
+    margin-left: 24vh;
+    margin-right: 24vh;
+    width: 265px;
+    font-size: 15px;
+}
+.button{
+    font-size: 15px;
+}
+.headphones{
+    color:darkgrey;
+    font-size: 10px;
 }
