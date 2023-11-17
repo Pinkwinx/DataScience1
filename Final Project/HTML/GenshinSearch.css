@@ -1,0 +1,35 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #25294A;
+}
+
+header {
+    background-color: #e1d4c6;
+    padding: 10px 0;
+    border-radius: 4px; /* Adding rounded edges */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Aligns the list items in the center */
+}
+
+    nav ul li {
+        display: inline;
+    }
+
+        nav ul li a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #485365;
+            text-decoration: none;
+            height: 100%; /* Set anchor height to match the nav bar */
+        }
+
+            nav ul li a:hover {
+                background-color: #555;
+                height: 100%; /* Match the anchor's height on hover */
+            }

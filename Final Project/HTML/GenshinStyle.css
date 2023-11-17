@@ -52,7 +52,7 @@
     }
 }
 /*buttons*/
-.rounded-button, .home-button{
+.rounded-button, .home-button {
     height: 50px;
     width: 500px;
     margin-top: 10vh;
@@ -63,22 +63,25 @@
     border: solid #CCBB9A;
     font-size: 20px;
     cursor: pointer;
-    font-family: monospace;
+    font-family: 'Philosopher', sans-serif;
     transition: background-color 0.3s;
     font-weight: bold;
 }
-.home-button{
-    height:100px;
-    width:100%;
-    background-color:white;
-    color:black;
+.home-button {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-family: 'Philosopher', sans-serif;
     border: solid black;
 }
-.home-button:hover{
-    background-color:black;
-    color:white;
-}
-#genshin:hover{
+    .home-button:hover {
+        background-color: black;
+        color: white;
+        font-family: 'Philosopher', sans-serif;
+    }
+#genshin:hover {
     background-color: #485365;
-    color:#e1d4c6;
+    color: #e1d4c6;
+    font-family: 'Philosopher', sans-serif;
 }
