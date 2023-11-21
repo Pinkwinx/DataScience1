@@ -3,10 +3,27 @@
     font-family: Arial, sans-serif;
     background-color: #25294A;
 }
-
+main {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #e1d4c6;
+    margin-top: 10vh;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.title {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+}
 header {
     background-color: #e1d4c6;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
     padding: 10px 0;
+    height: 32px;
     border-radius: 4px; /* Adding rounded edges */
 }
 
@@ -14,6 +31,7 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    height: 100%;
     text-align: center; /* Aligns the list items in the center */
 }
 
@@ -26,10 +44,40 @@ nav ul {
             padding: 10px 20px;
             color: #485365;
             text-decoration: none;
-            height: 100%; /* Set anchor height to match the nav bar */
+            height: 100%; 
         }
 
-            nav ul li a:hover {
-                background-color: #555;
-                height: 100%; /* Match the anchor's height on hover */
+            nav ul li.Pyro a:hover {
+                background-color: #e46720;
+                height: 100%;
             }
+            nav ul li.Hydro a:hover {
+                background-color: #1c8dbc;
+                height: 100%;
+            }
+            nav ul li.Anemo a:hover {
+                background-color: #229f87;
+                height: 100%;
+            }
+            nav ul li.Electro a:hover {
+                background-color: #9944bb;
+                height: 100%;
+            }
+            nav ul li.Dendro a:hover {
+                background-color: #6daa1d;
+                height: 100%;
+            }
+            nav ul li.Cryo a:hover {
+                background-color: #86a7c9;
+                height: 100%;
+            }
+            nav ul li.Geo a:hover {
+                background-color: #eaad1e;
+                height: 100%;
+            }
+            nav ul li.Home a:hover {
+                background-color: #555;
+                color: #e1d4c6;
+                height: 100%;
+            }
+            
