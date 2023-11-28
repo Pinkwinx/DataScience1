@@ -1,1 +1,44 @@
-<!-- -->
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Electro.css"> 
+    <title>Electro Characters</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="Home"><a href="Genshin.html">Home</a></li>
+                <li class="Pyro"><a href="Pyro.html">Pyro</a></li>
+                <li class="Hydro"><a href="Hydro.html">Hydro</a></li>
+                <li class="Anemo"><a href="Anemo.html">Anemo</a></li>
+                <li class="Electro"><a href="Electro.html">Electro</a></li>
+                <li class="Dendro"><a href="Dendro.html">Dendro</a></li>
+                <li class="Cryo"><a href="Cryo.html">Cryo</a></li>
+                <li class="Geo"><a href="Geo.html">Geo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="title">Electro characters</h1>
+        <div class="dropdown">
+            <select id="myDropdown" class="dropbtn" onchange="changeContent()">
+              <option value="Cyno">Cyno</option>
+              <option value="Keqing">Keqing</option>
+              <option value="Raiden">Raiden Shogun</option>
+              <option value="Miko">Yae Miko</option>
+            </select>
+        </div>
+        <div id="content">
+            <p> please use the dropdown menu to choose the character you want to see</p>
+        </div>    
+    </main>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="Electro.js"></script>
+</body>
+</html>

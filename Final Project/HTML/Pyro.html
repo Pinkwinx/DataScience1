@@ -1,12 +1,12 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="GenshinSearch.css"> 
-    <title>Genshin 5-Star Character Search</title>
+    <link rel="stylesheet" type="text/css" href="Pyro.css"> 
+    <title>Pyro Characters</title>
 </head>
 <body>
     <header>
@@ -14,14 +14,40 @@
             <ul>
                 <li class="Home"><a href="Genshin.html">Home</a></li>
                 <li class="Pyro"><a href="Pyro.html">Pyro</a></li>
-                <li class="Hydro"><a href="#">Hydro</a></li>
-                <li class="Anemo"><a href="#">Anemo</a></li>
-                <li class="Electro"><a href="#">Electro</a></li>
-                <li class="Dendro"><a href="#">Dendro</a></li>
-                <li class="Cryo"><a href="#">Cryo</a></li>
-                <li class="Geo"><a href="#">Geo</a></li>
+                <li class="Hydro"><a href="Hydro.html">Hydro</a></li>
+                <li class="Anemo"><a href="Anemo.html">Anemo</a></li>
+                <li class="Electro"><a href="Electro.html">Electro</a></li>
+                <li class="Dendro"><a href="Dendro.html">Dendro</a></li>
+                <li class="Cryo"><a href="Cryo.html">Cryo</a></li>
+                <li class="Geo"><a href="Geo.html">Geo</a></li>
             </ul>
         </nav>
     </header>
+
+    <main>
+        <h1 class="title">Pyro characters</h1>
+          <!-- Dropdown menu -->
+        <div class="dropdown">
+            <select id="myDropdown" class="dropbtn" onchange="changeContent()">
+              <option value="Dehya">Dehya</option>
+              <option value="HuTao">Hu Tao</option>
+              <option value="Klee">Klee</option>
+              <option value="Lyney">Lyney</option>
+              <option value="Yoimiya">Yoimiya</option>
+        
+            </select>
+        </div>
+        <!-- Content area -->
+        <div id="content">
+            <p> please use the dropdown menu to choose the character you want to see</p>
+        </div>
+    </main>
+    <!-- <div id="chart-container">
+        <svg id="chart"></svg>
+    </div> -->
+    
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="Pyro.js"></script>
+
 </body>
 </html>
