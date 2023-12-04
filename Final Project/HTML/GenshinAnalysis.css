@@ -15,7 +15,7 @@ html {
     flex: 0 0 auto;
     font-size: large;
     width: calc(50% - 20px); /* Adjust the width based on your preference */
-    margin-top: 20vh;
+    margin-top: 5vh;
     margin-left: 50vh;
     margin-right: 20vh;
 }
@@ -30,35 +30,35 @@ html {
     Height:100px;
 }
 .Tartaglia{
-    margin-left: 10vh;
-    width: 150px;
-    Height:150px;
+    margin-left: 20vh;
+    width: 100px;
+    Height:100px;
 }
 .Cyno{
     margin-left: 10vh;
-    width: 150px;
-    Height:150px;
+    width: 100px;
+    Height:100px;
 }
 .Kazuha{
-    margin-left: 10vh;
-    width: 150px;
-    Height:150px;
+    margin-left: 20vh;
+    width: 100px;
+    Height:100px;
 }
 .Eula{
     margin-left: 10vh;
-    width: 150px;
-    Height:150px;
+    width: 100px;
+    Height:100px;
 }
 
 /*Lumine running animations*/
 .Lumine-Idle{
-    margin-top: 10vh;
+    margin-top: 20vh;
     margin-left: 10vh;
     width: 400px;
     height: 400px;
 }
 .Lumine-Run{
-    margin-top: 10vh;
+    margin-top: 20vh;
     margin-left: 10vh;
     width: 400px;
     height: 400px;
@@ -67,7 +67,7 @@ html {
 .rounded-button, .home-button {
     height: 50px;
     width: 100%;
-    margin-top: 20vh;
+    margin-top: 5vh;
     margin-left: 15vh;
     border-radius: 50px;
     background-color: #D8CDB9;
