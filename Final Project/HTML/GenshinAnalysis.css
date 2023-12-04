@@ -13,14 +13,87 @@ html {
 .horizontal p {
     color: beige;
     flex: 0 0 auto;
+    font-size: large;
     width: calc(50% - 20px); /* Adjust the width based on your preference */
     margin-top: 20vh;
     margin-left: 50vh;
     margin-right: 20vh;
 }
-.floating-gif{
-    margin-top: 13vh;
+/*extra stickers*/
+.ArrowKeys{
+    margin-left: 17vh;
+    width: 100px;
+    Height:100px;
+}.Mouse{
+    margin-left: 10vh;
+    width: 100px;
+    Height:100px;
+}
+.Tartaglia{
+    margin-left: 10vh;
+    width: 150px;
+    Height:150px;
+}
+.Cyno{
+    margin-left: 10vh;
+    width: 150px;
+    Height:150px;
+}
+.Kazuha{
+    margin-left: 10vh;
+    width: 150px;
+    Height:150px;
+}
+.Eula{
+    margin-left: 10vh;
+    width: 150px;
+    Height:150px;
+}
+
+/*Lumine running animations*/
+.Lumine-Idle{
+    margin-top: 10vh;
     margin-left: 10vh;
     width: 400px;
     height: 400px;
+}
+.Lumine-Run{
+    margin-top: 10vh;
+    margin-left: 10vh;
+    width: 400px;
+    height: 400px;
+}
+/*buttons*/
+.rounded-button, .home-button {
+    height: 50px;
+    width: 100%;
+    margin-top: 20vh;
+    margin-left: 15vh;
+    border-radius: 50px;
+    background-color: #D8CDB9;
+    color: #485365;
+    border: solid #CCBB9A;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Philosopher', sans-serif;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+.home-button {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-family: 'Philosopher', sans-serif;
+    border: solid black;
+}
+    .home-button:hover {
+        background-color: black;
+        color: white;
+        font-family: 'Philosopher', sans-serif;
+    }
+#genshin:hover {
+    background-color: #485365;
+    color: #e1d4c6;
+    font-family: 'Philosopher', sans-serif;
 }
