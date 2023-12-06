@@ -8,19 +8,34 @@
     <title>Genshin Data Analysis</title>
 </head>
 <body>
+    <div class="title">
+        <button class="title-button" id="click">
+            <h1>Click to start adventure</h1>
+        </button>
+        <p> To navigate the journey please use the left and right arrow keys</p>
+        <p> Please also note that this was made before verison 4.1 so the data might be inaccurate for current time</p>
+    </div>
 <div class="horizontal">
-    <p class="intro">
-        Hello today we are going to explore the world of Teyvat while learning how limited 5-star characters correlates with Genshin Impact's banner revenue. Please use the left and right arrow keys or the scroll wheel to move forward and backwards.
+    <!--Introduction-->
+    <p>
+        Welcome, travellers, to the amazing world of Teyvat! As we journey through this land, we'll explore how the limited 5-star characters in Genshin Impact affect the game's banner sales.
     </p>
-    <img class="ArrowKeys" src="ArrowKeys.PNG" alt="Arrow keys">
-    <img class="Mouse" src="Mouse.PNG" alt="Mouse Scroll">
-    <p class="avg">
-        Did you know that on avarage each character banner makes roughly around $18.3 million, while only lasting for 20 days? That's a lot of money if you think about it. If you do that math that means Genshin makes $___ a year from banner sells alone!
+    <!-- <p>
+        To better grasp our journey ahead, let's first understand the game's basics.
     </p>
-    <p class="banner graph">
+    <p>
+        Genshin Impact is a Gacha game where you every attempt to acquire characters on a "banner" based on luck.
+    </p>
+    <p>
+        Banners are limited-time event that showcases special limited characters you have the chance of getting, where 5-stars are the rarest rarity. This is how Genshin makes most of its revenue.
+    </p> -->
+    <!--How revenue correlates with how many times a character has made an appearance-->
+    <p>
+        Did you know that on avarage each character banner makes roughly around $18.3 million, while only lasting for 20 days? That's a lot of money if you think about it. If you do that math that means Genshin makes $330 million a year from banner sells alone!
+    </p>
+    <p>
         Here is a graph that shows how much money Genshin has made with each verison patch
     </p>
-    <!--How revenue correlates with how many times a character has made an appearance-->
     <p>
         This would mean that the more time the character has appear in a banner, the more money the character has made overall. Here is are 2 graphs that showcasse the total amount of time that a character has reappear in a banner and the total they money they made since their release.
     </p>
@@ -60,6 +75,12 @@
         <img class="Eula" src="EulaChibi.png" alt="Chibi Eula">
     </p>
     <p>
+        Kazuha has an average usage rate of 75.9% making in total $52,075,519.
+    </p>
+    <p>
+        While Eula has an average usage rate of 11% and making in total $36,103,644.
+    </p>
+    <p>
         This makes sense since higher usage rate requires the player to have the character to use it, which means some people would have to spend money to get the character.
     </p>
     <!-- <p>
@@ -78,7 +99,7 @@
     <p>
         The second option is giving updates and buffs to older characters in the game. This way character feels newer and nicer to play with, which will increase the character abyss usage rates, allowing more players to want that specific characters.
     </p>
-    <button class="rounded-button" id="genshin" onclick="window.location.href='Genshin.html'">Return back to home page</button>
+    <!-- <button class="rounded-button" id="genshin" onclick="window.location.href='Genshin.html'">Return back to home page</button> -->
     <p>
          
     </p>
@@ -87,6 +108,9 @@
     <img class="Lumine-Idle" src="Lumine_Idle.GIF" alt="Lumine-Idle">
     <img class="Lumine-Run" src="Lumine_Run.GIF" alt="Lumine-Run">
 </div>
+<div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
 <script src="GenshinAnalysis.js"></script>
 </body>
 </html>

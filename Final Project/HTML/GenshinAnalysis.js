@@ -3,6 +3,21 @@ const imageContainer = document.querySelector('.image-container');
 const lumineIdle = document.querySelector('.Lumine-Idle');
 const lumineRun = document.querySelector('.Lumine-Run');
 
+//Progress Barr
+// When the user scrolls the page, execute scrollFunction
+// window.onscroll = function() {
+//     scrollFunction();
+//   };
+  
+//   function scrollFunction() {
+//     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//     const scrolled = (scrollTop / scrollHeight) * 100;
+  
+//     // Update the width of the progress bar with the percentage scrolled
+//     document.getElementById("myBar").style.width = scrolled + "%";
+//   }  
+//scrolling
 let isScrolling;
 let isArrowKeyDown = {
     ArrowLeft: false,
