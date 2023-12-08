@@ -66,15 +66,14 @@ html {
 /* Progress bar container */
 .progress-container {
     width: 100%;
-    background-color: white;
-  }
-  
-  /* Progress bar */
-  .progress-bar {
-    height: 5px;
-    background-color: black;
-    width: 0;
-  }
+    height: 8px;
+    background: white;
+}
+.progress-bar {
+    height: 8px;
+    background: black;
+    width: 0%;
+}
 /*buttons*/
 /* .rounded-button, .home-button {
     height: 50px;
