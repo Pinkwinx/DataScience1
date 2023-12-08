@@ -2,18 +2,36 @@ const container = document.querySelector('.horizontal');
 const imageContainer = document.querySelector('.image-container');
 const lumineIdle = document.querySelector('.Lumine-Idle');
 const lumineRun = document.querySelector('.Lumine-Run');
+const progressBar = document.getElementById('progressBar');
 
-window.onscroll = function() {scrollBar()};
-function scrollBar() {
-  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  let width = document.documentElement.scrollWidth - document.documentElement.clientWidth;
-  let scrolled = (winScroll / width) * 100;
-  if (scrolled>99){
-    scrolled = 99.999999
-  }
-  document.getElementById("myBar").style.width = scrolled + "%";
+document.getElementById("click").onclick = function() {
+    const titleDiv = document.querySelector('.title');
+    titleDiv.classList.add("fade-out");
+    
+    // Optionally, remove the div after the animation ends
+    titleDiv.addEventListener("transitionend", function() {
+        titleDiv.remove();
+    });
+
+    document.getElementById("custom-animation").classList.add("visible");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        })
+    });
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+};
+
+
+function updateProgressBar() {
+    const totalWidth = document.documentElement.scrollWidth - window.innerWidth;
+    const progress = (window.scrollX / totalWidth) * 100;
+    progressBar.style.width = `${progress}%`;
 }
-
 //scrolling
 let isScrolling;
 let isArrowKeyDown = {
@@ -105,11 +123,14 @@ if (document.addEventListener) {
     document.addEventListener('DOMMouseScroll', handleHorizontalScroll);
     document.addEventListener('keydown', handleArrowKeys);
     document.addEventListener('keyup', handleKeyUp);
+    document.addEventListener('scroll', updateProgressBar);
 } else {
     document.attachEvent('onmousewheel', handleHorizontalScroll);
     document.attachEvent('onkeydown', handleArrowKeys);
     document.attachEvent('onkeyup', handleKeyUp);
+    document.attachEvent('onscroll', updateProgressBar);
 }
 
+updateProgressBar();
 lumineIdle.style.display = 'block';
 lumineRun.style.display = 'none';
