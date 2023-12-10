@@ -15,21 +15,25 @@
         <p> To navigate the journey please use the left and right arrow keys</p>
         <p> Please also note that this was made before verison 4.1 so the data might be inaccurate for current time</p>
     </div>
-<div class="horizontal invisible" id="custom-animation">
+<div class="container invisible" id="custom-animation">
+<div class="horizontal">
     <!--Introduction-->
-    <p>
-        Welcome, travellers, to the amazing world of Teyvat! As we journey through this land, we'll explore how the limited 5-star characters in Genshin Impact affect the game's banner sales.
+    <p class="first-line">
+        Welcome, travellers, to the amazing world of Teyvat! Today we'll journey through this land, and explore how the limited 5-star characters in Genshin Impact affect the game's banner sales.
     </p>
     <p>
-        So let’s find out how Hoyoverse (the creator of Genshin Impact) can maxzime their profit even more from character banners, even though they already exploit the player base and make millions a month already.
+        So let’s find some more ways that Hoyoverse (the creator of Genshin Impact) can maximize their profit even more from their character banners, by looking at all the character banners and spiral abyss patterns to see what it tells us, even though they make millions a month already.
     </p>
     <!--How revenue correlates with how many times a character has made an appearance-->
     <p>
         Did you know that on avarage each character banner makes roughly around $18.3 million, while only lasting for 20 days? That's a lot of money if you think about it. If you do that math that means Genshin makes $330 million a year from banner sells alone!
     </p>
     <p>
-        Here is a graph that shows how much money Genshin has made with each verison patch
+        Here is a graph that shows how much money Genshin has made with each verison patch all the way up to 4.1.
     </p>
+    <div class="graph-container">
+        <canvas id="lineGraph"></canvas>
+      </div>
     <p>
         This would mean that the more time the character has appear in a banner, the more money the character has made overall. Here is are 2 graphs that showcasse the total amount of time that a character has reappear in a banner and the total they money they made since their release.
     </p>
@@ -87,17 +91,16 @@
     <p>
         The second option is giving updates and buffs to older characters in the game. This way character feels newer and nicer to play with, which will increase the character abyss usage rates, allowing more players to want that specific characters.
     </p>
-    <p>
-         
+    <p class="blank">
+
     </p>
+</div>
 </div>
 <div class="image-container">
     <img class="Lumine-Idle" src="Lumine_Idle.GIF" alt="Lumine-Idle">
     <img class="Lumine-Run" src="Lumine_Run.GIF" alt="Lumine-Run">
 </div>
-<div class="progress-container">
-    <div class="progress-bar" id="progressBar"></div>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="GenshinAnalysis.js"></script>
 </body>
 </html>

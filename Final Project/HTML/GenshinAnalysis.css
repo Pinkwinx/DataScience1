@@ -1,8 +1,26 @@
+html {
+    /* Set background properties */
+    background-image: url('GenshinBackground.png'); /* Replace 'your-background-image-url.jpg' with your image URL */
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+/*the fade in and out start button thingy*/
 .title p{
+    /* text-align: center; */
     width: 700px;
+    font-size: x-large;
+    text-align: center;
+    color: beige;
+    margin-left: 67vh;
+    z-index: 9999999;
 }
 .title{
-    margin-left: 50vh;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    z-index: 9999999;
 }
 .title-button{
     width:25%;
@@ -10,6 +28,12 @@
     border: solid 2px black;
     border-radius: 200px;
     transition: color 0.5s ,all 1s;
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    margin-left: 75vh;
+    z-index: 9999999;
+
 }
 .title-button:hover{
     width:50%;
@@ -17,6 +41,9 @@
     color: white;
     border: solid 2px black;
     border-radius: 200px;
+    margin-left: 62.5vh;
+    z-index: 9999999;
+
 }
 .invisible, .hidden{
     opacity: 0;
@@ -33,13 +60,7 @@
     opacity: 0;
     transition: opacity 2s ease-out;
 }
-html {
-    /* Set background properties */
-    background-image: url('GenshinBackground.png'); /* Replace 'your-background-image-url.jpg' with your image URL */
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size: cover;
-}
+/*the text part*/
 .horizontal {
     display: flex;
     flex-direction: row;
@@ -51,19 +72,37 @@ html {
     font-size: xx-large;
     width: calc(50% - 20px); /* Adjust the width based on your preference */
     margin-top: 5vh;
+    margin-left: 40vh;
+    margin-right: 40vh;
+}
+.horizontal .first-line{
     margin-left: 50vh;
-    margin-right: 20vh;
 }
+/*graphs*/
+.graph-container {
+    position: relative;
+    z-index: 5;
+    margin: 50px auto;
+    /* overflow: auto; */
+  }
+  .tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none; /* Ensure tooltip doesn't interfere with hover events */
+  }
+  #lineGraph {
+    position: relative;
+    border: 1px solid #ccc;
+    width: 750px; 
+    height: 400px;
+    /* display: block; */
+  }
+  
 /*extra stickers*/
-.ArrowKeys{
-    margin-left: 17vh;
-    width: 100px;
-    Height:100px;
-}.Mouse{
-    margin-left: 10vh;
-    width: 100px;
-    Height:100px;
-}
 .Tartaglia{
     margin-left: 20vh;
     width: 100px;
@@ -87,29 +126,18 @@ html {
 
 /*Lumine running animations*/
 .Lumine-Idle{
-    margin-top: 35vh;
+    position: fixed;
+    z-index: 99;
+    margin-top: 25vh;
     margin-left: 15vh;
     width: 600px;
     height: 600px;
 }
 .Lumine-Run{
-    margin-top: 35vh;
+    position: fixed;
+    z-index: 99;
+    margin-top: 25vh;
     margin-left: 15vh;
     width: 600px;
     height:600px;
-}
-/* Progress Bar */
-.progress-container {
-    width: 100%;
-    background-color: #f3f3f3;
-    position: fixed;
-    bottom: 0;
-    z-index: 9999;
-}
-
-.progress-bar {
-    height: 5px;
-    background-color: black;
-    width: 0; /* Initial width set to 0 */
-    transition: width 0.2s ease-in-out;
 }
