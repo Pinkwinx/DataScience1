@@ -123,95 +123,345 @@ if (document.addEventListener) {
     document.attachEvent('onkeydown', handleArrowKeys);
     document.attachEvent('onkeyup', handleKeyUp);
 }
-//graphs
-const data = [
-    { x: 0, y: 30 },
-    { x: 1, y: 40 },
-    { x: 2, y: 25 },
-    { x: 3, y: 35 },
-    { x: 4, y: 45 },
-    { x: 5, y: 50 },
-    { x: 6, y: 40 }
-  ];
-  
-  // Function to draw the line graph
-  function drawGraph() {
-    const canvas = document.getElementById('lineGraph');
-    const ctx = canvas.getContext('2d');
-    const width = canvas.width;
-    const height = canvas.height;
-  
-    // Clear canvas
-    ctx.clearRect(0, 0, width, height);
-  
-    // Plotting the data points
-    ctx.beginPath();
-    ctx.strokeStyle = '#007bff';
-    ctx.lineWidth = 2;
-  
-    for (let i = 0; i < data.length; i++) {
-      const x = (width / (data.length - 1)) * i;
-      const y = height - (height * data[i].y) / 100;
-  
-      if (i === 0) {
-        ctx.moveTo(x, y);
-      } else {
-        ctx.lineTo(x, y);
-      }
-  
-      // Draw circles for data points
-      ctx.beginPath();
-      ctx.arc(x, y, 5, 0, Math.PI * 2);
-      ctx.fillStyle = '#007bff';
-      ctx.fill();
-      ctx.closePath();
-    }
-  
-    ctx.stroke();
-  
-    // Tooltip element
-    const tooltip = document.createElement('div');
-    tooltip.classList.add('tooltip');
-    canvas.parentNode.appendChild(tooltip);
-    tooltip.style.display = 'none';
-  
-    // Show tooltip on hover
-    canvas.addEventListener('mousemove', function (e) {
-      const rect = canvas.getBoundingClientRect();
-      const mouseX = e.clientX - rect.left;
-      const mouseY = e.clientY - rect.top;
-  
-      for (let i = 0; i < data.length; i++) {
-        const x = (width / (data.length - 1)) * i;
-        const y = height - (height * data[i].y) / 100;
-  
-        if (mouseX >= x - 8 && mouseX <= x + 8 && mouseY >= y - 8 && mouseY <= y + 8) {
-          // Show tooltip with x and y-axis values
-          tooltip.style.display = 'block';
-          tooltip.style.left = e.pageX + 'px';
-          tooltip.style.top = e.pageY - 30 + 'px';
-          tooltip.textContent = `X: ${data[i].x}, Y: ${data[i].y}`;
-          
-          // Highlight the point
-          ctx.clearRect(0, 0, width, height);
-          ctx.beginPath();
-          ctx.arc(x, y, 7, 0, Math.PI * 2);
-          ctx.fillStyle = '#ff0000';
-          ctx.fill();
-          ctx.closePath();
+//verison line graphs
+let verison = ['1.0','1.1','1.2','1.3','1.4','1.5','1.6','2.0','2.1','2.2','2.3','2.4','2.5','2.6','2.7','2.8','3.0','3.1','3.2','3.3','3.4','3.5','3.6','3.7','3.8','4.0']
+    new Chart(document.getElementById("lineGraph"), {
+        type: 'line',
+        data:{
+            labels: verison,
+            datasets: [{
+                label: "How much Genshin makes each patch (in millions)",
+                data: [{x:30,y:53.38},
+                    {x:25,y:29.70},
+                    {x:90,y:27.48},
+                    {x:25,y:35.13},
+                    {x:90,y:23.57},
+                    {x:150,y:22.83},
+                    {x:70,y:16.81},
+                    {x:95,y:25.06},
+                    {x:55,y:40.04},
+                    {x:90,y:33.01},
+                    {x:110,y:30.43},
+                    {x:125,y:43.77},
+                    {x:155,y:48.67},
+                    {x:40,y:58.70},
+                    {x:55,y:44.76},
+                    {x:60,y:39.14},
+                    {x:90,y:34.75},
+                    {x:75,y:34.78},
+                    {x:65,y:50.53},
+                    {x:90,y:65.04},
+                    {x:130,y:64.91},
+                    {x:150,y:49.16},
+                    {x:10,y:37.12},
+                    {x:125,y:26.61},
+                    {x:185,y:15.58},
+                    {x:185,y:20.51}
+                ],
+                backgroundColor: 'rgb(17, 22, 99)',
+            }]
         }
-      }
-    });
-  
-    // Hide tooltip when not hovering over a point
-    canvas.addEventListener('mouseout', function () {
-      tooltip.style.display = 'none';
-      ctx.clearRect(0, 0, width, height);
-      drawGraph(); // Redraw the graph when the mouse moves out
-    });
-  }
-  
+    })
+//list for characters and rgb
+let char = ['Albedo','Alhaitham','Arataki Itto','Baizhu','Cyno','Dehya','Eula','Ganyu','Hu Tao','Kaedehara Kazuha','Kamisato Ayaka','Kamisato Ayato','Keqing','Klee','Lyney','Nahida','Nilou','Raiden Shogun','Sangonomiya Kokomi','Shenhe','Tartaglia','Tighnari','Venti','Wanderer','Xiao','Yae Miko','Yelan','Yoimiya','Zhongli']
+let charMode = [3,2,3,1,2,1,3,4,3,3,3,2,1,4,1,2,2,3,2,2,5,1,4,2,4,3,3,4,5]
+let charRev = [44.57,35.82,53.12,9.11,32.25,13.20,36.10,67.24,84.26,52.08,88.35,60.69,9.51,61.02,11.47,60.12,43.75,104.50,16.15,52.96,55.67,19.07,89.07,36.26,80.68,42.70,90.21,64.20,81.37]
+let charAbyss = [28.44,39.15,18.32,49.07,16.33,9.85,16.03,40.13,51.59,79.83,48.88,26.86,8.14,19.82,34.30,78.87,41.76,67.83,59.76,32.94,33.67,15.61,40.69,17.58,22.89,33.07,75.28,22.61,75.52]
+let charbg = [
+    'rgba(255, 205, 86)',
+    'rgba(109, 170, 29)',
+    'rgba(255, 205, 86)',
+    'rgba(109, 170, 29)',
+    'rgba(153, 102, 255)',
+    'rgba(255, 159, 64)',
+    'rgba(134, 167, 201)',
+    'rgba(134, 167, 201)',
+    'rgba(255, 159, 64)',
+    'rgba(75, 192, 192)',
+    'rgba(134, 167, 201)',
+    'rgba(54, 162, 235)',
+    'rgba(153, 102, 255)',
+    'rgba(255, 159, 64)',
+    'rgba(255, 159, 64)',
+    'rgba(109, 170, 29)',
+    'rgba(54, 162, 235)',
+    'rgba(153, 102, 255)',
+    'rgba(54, 162, 235)',
+    'rgba(134, 167, 201)',
+    'rgba(54, 162, 235)',
+    'rgba(109, 170, 29)',
+    'rgba(75, 192, 192)',
+    'rgba(75, 192, 192)',
+    'rgba(75, 192, 192)',
+    'rgba(153, 102, 255)',
+    'rgba(54, 162, 235)',
+    'rgba(255, 159, 64)',
+    'rgba(255, 205, 86)'
+  ]
+  let tartagliabg = [
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(54, 162, 235)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 205, 86, 0.2)'
+  ]
+  let cynobg = [
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(153, 102, 255)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 205, 86, 0.2)'
+  ]
+  let kazuhabg = [
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(75, 192, 192)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 205, 86, 0.2)'
+  ]
+  let eulabg = [
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(255, 205, 86, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(134, 167, 201)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(134, 167, 201, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(109, 170, 29, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+    'rgba(153, 102, 255, 0.2)',
+    'rgba(54, 162, 235,0.2)',
+    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 205, 86, 0.2)'
+  ]
+  //making new bar graphs
+    new Chart(document.getElementById("barGraph1"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "How many times a 5-character has made an apperance on the featured banner",
+                data: charMode,
+                backgroundColor: charbg,
+                  borderColor: charbg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("barGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount a 5-character has made",
+                data: charRev,
+                backgroundColor: charbg,
+                  borderColor: charbg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("tartagliaGraph1"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "How many times Tartaglia has made an apperance on the featured banner",
+                data: charMode,
+                backgroundColor: tartagliabg,
+                  borderColor: tartagliabg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("tartagliaGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount Tartaglia has made",
+                data: charRev,
+                backgroundColor: tartagliabg,
+                  borderColor: tartagliabg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("cynoGraph1"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "How many times Cyno has made an apperance on the featured banner",
+                data: charMode,
+                backgroundColor: cynobg,
+                  borderColor: cynobg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("cynoGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount Cyno has made",
+                data: charRev,
+                backgroundColor: cynobg,
+                  borderColor: cynobg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("barGraph3"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Avarage abyss usage rate of all 5-star limited characters in percentage",
+                data: charAbyss,
+                backgroundColor: charbg,
+                  borderColor: charbg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("kazuhaGraph1"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Avarage abyss usage rate of Kazuha in percentage",
+                data: charAbyss,
+                backgroundColor: kazuhabg,
+                  borderColor: kazuhabg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("kazuhaGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount Kazuha has made",
+                data: charRev,
+                backgroundColor: kazuhabg,
+                  borderColor: kazuhabg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("eulaGraph1"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Avarage abyss usage rate of Eula in percentage",
+                data: charAbyss,
+                backgroundColor: eulabg,
+                  borderColor: eulabg,
+                  borderWidth: 1
+            }]
+        }
+    })
+    new Chart(document.getElementById("eulaGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount Eula has made",
+                data: charRev,
+                backgroundColor: eulabg,
+                  borderColor: eulabg,
+                  borderWidth: 1
+            }]
+        }
+    })
 //add things to html
 lumineIdle.style.display = 'block';
 lumineRun.style.display = 'none';
-window.onload = drawGraph;

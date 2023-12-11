@@ -13,7 +13,7 @@
             <h1>Click to start adventure</h1>
         </button>
         <p> To navigate the journey please use the left and right arrow keys</p>
-        <p> Please also note that this was made before verison 4.1 so the data might be inaccurate for current time</p>
+        <p> Please also note that this was made before verison 4.0 so the data might be inaccurate for current time</p>
     </div>
 <div class="container invisible" id="custom-animation">
 <div class="horizontal">
@@ -22,14 +22,14 @@
         Welcome, travellers, to the amazing world of Teyvat! Today we'll journey through this land, and explore how the limited 5-star characters in Genshin Impact affect the game's banner sales.
     </p>
     <p>
-        So let’s find some more ways that Hoyoverse (the creator of Genshin Impact) can maximize their profit even more from their character banners, by looking at all the character banners and spiral abyss patterns to see what it tells us, even though they make millions a month already.
+        So let’s find some more ways that Hoyoverse (the creator of Genshin Impact) can maximize their profit even more from their character banners, by looking at all the 5-star character banners and spiral abyss patterns to see what it tells us, even though they make millions a month already.
     </p>
     <!--How revenue correlates with how many times a character has made an appearance-->
     <p>
         Did you know that on avarage each character banner makes roughly around $18.3 million, while only lasting for 20 days? That's a lot of money if you think about it. If you do that math that means Genshin makes $330 million a year from banner sells alone!
     </p>
     <p>
-        Here is a graph that shows how much money Genshin has made with each verison patch all the way up to 4.1.
+        Here is a graph that shows how much money Genshin has made with each verison patch all the way up to 4.0.
     </p>
     <div class="graph-container">
         <canvas id="lineGraph"></canvas>
@@ -37,8 +37,14 @@
     <p>
         This would mean that the more time the character has appear in a banner, the more money the character has made overall. Here is are 2 graphs that showcasse the total amount of time that a character has reappear in a banner and the total they money they made since their release.
     </p>
+    <div class="graph-container">
+        <canvas id="barGraph1"></canvas>
+      </div>
+      <div class="graph-container">
+        <canvas id="barGraph2"></canvas>
+      </div>
     <p>
-        From these graph we can see that most character has made a appearanace in the limited banner for at least 3 time, and on avarage a character makes a total of $__ million.
+        From these graph we can see that most character has made a appearanace in the limited banner for at least 3 time, and on avarage a character makes a total of $51.57 million.
     </p>
     <p>
         This supports the claim since we can see that characters who has made an appearanace more than 3 times make more money than the avarage total a character would make. While characters who has made an apperance less than 3 times make less money than the avarage total a character would make.
@@ -51,21 +57,33 @@
     <p>
         Tartaglia has have 5 appearanaces on the 5-star limited banner and has made a total of $55,671,528.
     </p>
+    <div class="graph-container">
+        <canvas id="tartagliaGraph1"></canvas>
+      </div>
+      <div class="graph-container">
+        <canvas id="tartagliaGraph2"></canvas>
+      </div>
     <p>
         While Cyno has only 2 appearanaces on the 5-star limited banner and only has made a total of $32,250,069.
     </p>
+    <div class="graph-container">
+        <canvas id="cynoGraph1"></canvas>
+      </div>
+      <div class="graph-container">
+        <canvas id="cynoGraph2"></canvas>
+      </div>
     <p>
         This makes sense since the more times the character makes an appearance, the more chances the players have trying to get that character, which leads to spending more money since the character banner only lasts for a limited amount of days. 
     </p>
     <!--How revenue correlates with the abyss usuage number that a character has-->
     <p>
-        Another way that 5-star characters correlates with Genshin Impact's banner revenue, is their usuage rate in Spriral Abyss
+        Another way that 5-star characters correlates with Genshin Impact's banner revenue, is their usuage rate in Spriral Abyss. Here is a graph that shows the overall aravage abyss usuage rate of each limited 5-star character.
     </p>
+    <div class="graph-container">
+        <canvas id="barGraph3"></canvas>
+      </div>
     <p>
-        The avarage usage rate in percent of a five-star is %___, here is a graph that shows the overall aravage abyss usuage rate of each limited 5-star character.
-    </p>
-    <p>
-        As we can see from the graph, characters with higher abyss usage rate (%__ or above) make more money than the avarage total, while a character would make with a lower abyss usage rte (%__ or lower) make less money than the avarage total.
+        As we can see from the graph, characters with a higher avarage abyss usage rate (%38.10 or above) make more money than the avarage total, while a character with a lower avarage abyss usage rate (%38.10 or lower) would make less money than the avarage total.
     </p>
     <p>
         This claim can be seen and heavily implied by the characters Kazuha and Eula.
@@ -75,9 +93,21 @@
     <p>
         Kazuha has an average usage rate of 75.9% making in total $52,075,519.
     </p>
+    <div class="graph-container">
+        <canvas id="kazuhaGraph1"></canvas>
+      </div>
+      <div class="graph-container">
+        <canvas id="kazuhaGraph2"></canvas>
+      </div>
     <p>
         While Eula has an average usage rate of 11% and making in total $36,103,644.
     </p>
+    <div class="graph-container">
+        <canvas id="eulaGraph1"></canvas>
+      </div>
+      <div class="graph-container">
+        <canvas id="eulaGraph2"></canvas>
+      </div>
     <p>
         This makes sense since higher usage rate requires the player to have the character to use it, which means some people would have to spend money to get the character.
     </p>

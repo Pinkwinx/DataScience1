@@ -19,7 +19,7 @@ html {
     position: fixed;
     align-items: center;
     justify-content: center;
-    margin-top: 5vh;
+    margin-top: 20vh;
     z-index: 9999999;
 }
 .title-button{
@@ -71,7 +71,7 @@ html {
     flex: 0 0 auto;
     font-size: xx-large;
     width: calc(50% - 20px); /* Adjust the width based on your preference */
-    margin-top: 5vh;
+    margin-top: 20vh;
     margin-left: 40vh;
     margin-right: 40vh;
 }
@@ -85,23 +85,107 @@ html {
     margin: 50px auto;
     /* overflow: auto; */
   }
-  .tooltip {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    pointer-events: none; /* Ensure tooltip doesn't interfere with hover events */
-  }
   #lineGraph {
     position: relative;
-    border: 1px solid #ccc;
-    width: 750px; 
-    height: 400px;
-    /* display: block; */
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
   }
-  
+  #barGraph1 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+    margin-right: 5vh;
+  }
+  #barGraph2 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+  }
+  #tartagliaGraph1 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+    margin-right: 5vh;
+  }
+  #tartagliaGraph2 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+  }
+  #cynoGraph1 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+    margin-right: 5vh;
+  }
+  #cynoGraph2 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+  }
+  #barGraph3 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+  }
+  #kazuhaGraph1 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+    margin-right: 5vh;
+  }
+  #kazuhaGraph2 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+  }
+  #eulaGraph1 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+    margin-right: 5vh;
+  }
+  #eulaGraph2 {
+    position: relative;
+    border: 1px solid #fff;
+    width: 1900px; 
+    height: 1400px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.75);    /* display: block; */
+  }
 /*extra stickers*/
 .Tartaglia{
     margin-left: 20vh;
@@ -128,7 +212,7 @@ html {
 .Lumine-Idle{
     position: fixed;
     z-index: 99;
-    margin-top: 25vh;
+    /* margin-top: 10vh; */
     margin-left: 15vh;
     width: 600px;
     height: 600px;
@@ -136,7 +220,7 @@ html {
 .Lumine-Run{
     position: fixed;
     z-index: 99;
-    margin-top: 25vh;
+    /* margin-top: 10vh; */
     margin-left: 15vh;
     width: 600px;
     height:600px;
