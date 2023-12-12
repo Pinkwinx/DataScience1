@@ -82,7 +82,7 @@ html {
 .graph-container {
     position: relative;
     z-index: 5;
-    margin: 50px auto;
+    /* margin: 50px auto; */
     /* overflow: auto; */
   }
   #lineGraph {
