@@ -160,13 +160,29 @@ let verison = ['1.0','1.1','1.2','1.3','1.4','1.5','1.6','2.0','2.1','2.2','2.3'
                 ],
                 backgroundColor: 'rgb(17, 22, 99)',
             }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Version Updates'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Revenue Generated (in millions)'
+                    }
+                }
+            }
         }
     })
 //list for characters and rgb
 let char = ['Albedo','Alhaitham','Arataki Itto','Baizhu','Cyno','Dehya','Eula','Ganyu','Hu Tao','Kaedehara Kazuha','Kamisato Ayaka','Kamisato Ayato','Keqing','Klee','Lyney','Nahida','Nilou','Raiden Shogun','Sangonomiya Kokomi','Shenhe','Tartaglia','Tighnari','Venti','Wanderer','Xiao','Yae Miko','Yelan','Yoimiya','Zhongli']
 let charMode = [3,2,3,1,2,1,3,4,3,3,3,2,1,4,1,2,2,3,2,2,5,1,4,2,4,3,3,4,5]
-let charRev = [44.57,35.82,53.12,9.11,32.25,13.20,36.10,67.24,84.26,52.08,88.35,60.69,9.51,61.02,11.47,60.12,43.75,104.50,16.15,52.96,55.67,19.07,89.07,36.26,80.68,42.70,90.21,64.20,81.37]
-let charAbyss = [28.44,39.15,18.32,49.07,16.33,9.85,16.03,40.13,51.59,79.83,48.88,26.86,8.14,19.82,34.30,78.87,41.76,67.83,59.76,32.94,33.67,15.61,40.69,17.58,22.89,33.07,75.28,22.61,75.52]
+let charRev = [44.57,35.82,53.12,9.11,32.25,13.20,36.10,67.24,84.26,52.08,88.35,60.69,9.51,61.02,11.47,60.152,43.75,104.50,16.15,52.96,55.67,19.07,89.07,36.26,80.68,42.70,90.151,64.20,81.37]
+let charAbyss = [28.44,39.15,18.32,49.07,16.33,9.85,16.03,40.153,51.59,79.83,48.88,26.86,8.14,19.82,34.30,78.87,41.76,67.83,59.76,32.94,33.67,15.61,40.69,17.58,22.89,33.07,75.28,22.61,75.52]
 let charbg = [
     'rgba(255, 205, 86)',
     'rgba(109, 170, 29)',
@@ -199,319 +215,445 @@ let charbg = [
     'rgba(255, 205, 86)'
   ]
   let tartagliabg = [
-    'rgba(255, 205, 86, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(255, 205, 86, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(134, 167, 201, 0.2)',
+    'rgba(255, 205, 86, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(255, 205, 86, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(134, 167, 201, 0.15)',
     'rgba(54, 162, 235)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(255, 205, 86, 0.2)'
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(255, 205, 86, 0.15)'
   ]
   let cynobg = [
-    'rgba(255, 205, 86, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(255, 205, 86, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
+    'rgba(255, 205, 86, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(255, 205, 86, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
     'rgba(153, 102, 255)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(54, 162, 235, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(255, 205, 86, 0.2)'
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(54, 162, 235, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(255, 205, 86, 0.15)'
   ]
   let kazuhabg = [
-    'rgba(255, 205, 86, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(255, 205, 86, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 205, 86, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(255, 205, 86, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
     'rgba(75, 192, 192)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(54, 162, 235, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(255, 205, 86, 0.2)'
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(54, 162, 235, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(255, 205, 86, 0.15)'
   ]
   let eulabg = [
-    'rgba(255, 205, 86, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(255, 205, 86, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
+    'rgba(255, 205, 86, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(255, 205, 86, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
     'rgba(134, 167, 201)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(134, 167, 201, 0.2)',
-    'rgba(54, 162, 235, 0.2)',
-    'rgba(109, 170, 29, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(75, 192, 192, 0.2)',
-    'rgba(153, 102, 255, 0.2)',
-    'rgba(54, 162, 235,0.2)',
-    'rgba(255, 159, 64, 0.2)',
-    'rgba(255, 205, 86, 0.2)'
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(134, 167, 201, 0.15)',
+    'rgba(54, 162, 235, 0.15)',
+    'rgba(109, 170, 29, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
+    'rgba(153, 102, 255, 0.15)',
+    'rgba(54, 162, 235,0.15)',
+    'rgba(255, 159, 64, 0.15)',
+    'rgba(255, 205, 86, 0.15)'
   ]
   //making new bar graphs
-  function createZoomableBarGraph(id, labels, data, backgroundColor) {
-    const originalOptions = {
+    new Chart(document.getElementById("barGraph1"), {
         type: 'bar',
-        data: {
-            labels: labels,
+        data:{
+            labels: char,
             datasets: [{
-                data: data,
-                backgroundColor: backgroundColor,
-                borderColor: backgroundColor,
-                borderWidth: 1
+                label: "How many times a 5-character has made an apperance on the featured banner",
+                data: charMode,
+                backgroundColor: charbg,
+                  borderColor: charbg,
+                  borderWidth: 1
             }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'The amount of times a character has made a reapperance'
+                    }
+                }
+            }
         }
-    };
-    const toggleZoom = () => {
-        const chart = Chart.getChart(chartElement);
-        const options = chart.options || originalOptions;
-
-        if (!chart.zoomed) {
-            chart.originalOptions = options;
-            chart.options = {
-                ...options,
-                responsive: true,
-                maintainAspectRatio: false,
-                // Additional zoom-in options
-            };
-            chart.update();
-            chart.zoomed = true;
-        } else {
-            chart.options = chart.originalOptions;
-            chart.update();
-            chart.zoomed = false;
+    })
+    new Chart(document.getElementById("barGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount a 5-character has made",
+                data: charRev,
+                backgroundColor: charbg,
+                  borderColor: charbg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Total revenue a character has made (in millions)'
+                    }
+                }
+            }
         }
-    };
-
-    const chartElement = document.getElementById(id);
-    chartElement.addEventListener('click', toggleZoom);
-
-    return new Chart(chartElement, originalOptions);
-}
-createZoomableBarGraph("barGraph1", char, charMode, charbg);
-createZoomableBarGraph("barGraph2", char, charRev, charbg);
-createZoomableBarGraph("tartagliaGraph1", char, charMode, tartagliabg);
-createZoomableBarGraph("tartagliaGraph2", char, charRev, tartagliabg);
-createZoomableBarGraph("cynoGraph1", char, charMode, cynobg);
-createZoomableBarGraph("cynoGraph2", char, charRev, cynobg);
-createZoomableBarGraph("barGraph3", char, charAbyss, charbg);
-createZoomableBarGraph("kazuhaGraph1", char, charAbyss, kazuhabg);
-createZoomableBarGraph("kazuhaGraph2", char, charRev, kazuhabg);
-createZoomableBarGraph("eulaGraph1", char, charAbyss, eulabg);
-createZoomableBarGraph("eulaGraph2", char, charRev, eulabg);
-    // new Chart(document.getElementById("barGraph1"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "How many times a 5-character has made an apperance on the featured banner",
-    //             data: charMode,
-    //             backgroundColor: charbg,
-    //               borderColor: charbg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("barGraph2"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "Total amount a 5-character has made",
-    //             data: charRev,
-    //             backgroundColor: charbg,
-    //               borderColor: charbg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("tartagliaGraph1"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "How many times Tartaglia has made an apperance on the featured banner",
-    //             data: charMode,
-    //             backgroundColor: tartagliabg,
-    //               borderColor: tartagliabg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("tartagliaGraph2"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "Total amount Tartaglia has made",
-    //             data: charRev,
-    //             backgroundColor: tartagliabg,
-    //               borderColor: tartagliabg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("cynoGraph1"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "How many times Cyno has made an apperance on the featured banner",
-    //             data: charMode,
-    //             backgroundColor: cynobg,
-    //               borderColor: cynobg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("cynoGraph2"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "Total amount Cyno has made",
-    //             data: charRev,
-    //             backgroundColor: cynobg,
-    //               borderColor: cynobg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("barGraph3"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "Avarage abyss usage rate of all 5-star limited characters in percentage",
-    //             data: charAbyss,
-    //             backgroundColor: charbg,
-    //               borderColor: charbg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("kazuhaGraph1"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "Avarage abyss usage rate of Kazuha in percentage",
-    //             data: charAbyss,
-    //             backgroundColor: kazuhabg,
-    //               borderColor: kazuhabg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("kazuhaGraph2"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "Total amount Kazuha has made",
-    //             data: charRev,
-    //             backgroundColor: kazuhabg,
-    //               borderColor: kazuhabg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("eulaGraph1"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "Avarage abyss usage rate of Eula in percentage",
-    //             data: charAbyss,
-    //             backgroundColor: eulabg,
-    //               borderColor: eulabg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
-    // new Chart(document.getElementById("eulaGraph2"), {
-    //     type: 'bar',
-    //     data:{
-    //         labels: char,
-    //         datasets: [{
-    //             label: "Total amount Eula has made",
-    //             data: charRev,
-    //             backgroundColor: eulabg,
-    //               borderColor: eulabg,
-    //               borderWidth: 1
-    //         }]
-    //     }
-    // })
+    })
+    new Chart(document.getElementById("tartagliaGraph1"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "How many times Tartaglia has made an apperance on the featured banner",
+                data: charMode,
+                backgroundColor: tartagliabg,
+                  borderColor: tartagliabg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'The amount of times a character has made a reapperance'
+                    }
+                }
+            }
+        }
+    })
+    new Chart(document.getElementById("tartagliaGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount Tartaglia has made",
+                data: charRev,
+                backgroundColor: tartagliabg,
+                  borderColor: tartagliabg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Total revenue a character has made (in millions)'
+                    }
+                }
+            }
+        }
+    })
+    new Chart(document.getElementById("cynoGraph1"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "How many times Cyno has made an apperance on the featured banner",
+                data: charMode,
+                backgroundColor: cynobg,
+                  borderColor: cynobg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'The amount of times a character has made a reapperance'
+                    }
+                }
+            }
+        }
+    })
+    new Chart(document.getElementById("cynoGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount Cyno has made",
+                data: charRev,
+                backgroundColor: cynobg,
+                  borderColor: cynobg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Total revenue a character has made (in millions)'
+                    }
+                }
+            }
+        }
+    })
+    new Chart(document.getElementById("barGraph3"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Avarage abyss usage rate of all 5-star limited characters in percentage",
+                data: charAbyss,
+                backgroundColor: charbg,
+                  borderColor: charbg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Avarage Spiral Abyss usuage rate of each character (in percentage)'
+                    }
+                }
+            }
+        }
+    })
+    new Chart(document.getElementById("kazuhaGraph1"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Avarage abyss usage rate of Kazuha in percentage",
+                data: charAbyss,
+                backgroundColor: kazuhabg,
+                  borderColor: kazuhabg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Avarage Spiral Abyss usuage rate of each character (in percentage)'
+                    }
+                }
+            }
+        }
+    })
+    new Chart(document.getElementById("kazuhaGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount Kazuha has made",
+                data: charRev,
+                backgroundColor: kazuhabg,
+                  borderColor: kazuhabg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Total revenue a character has made (in millions)'
+                    }
+                }
+            }
+        }
+    })
+    new Chart(document.getElementById("eulaGraph1"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Avarage abyss usage rate of Eula in percentage",
+                data: charAbyss,
+                backgroundColor: eulabg,
+                  borderColor: eulabg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Avarage Spiral Abyss usuage rate of each character (in percentage)'
+                    }
+                }
+            }
+        }
+    })
+    new Chart(document.getElementById("eulaGraph2"), {
+        type: 'bar',
+        data:{
+            labels: char,
+            datasets: [{
+                label: "Total amount Eula has made",
+                data: charRev,
+                backgroundColor: eulabg,
+                  borderColor: eulabg,
+                  borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Character name'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Total revenue a character has made (in millions)'
+                    }
+                }
+            }
+        }
+    })
 //add things to html
 lumineIdle.style.display = 'block';
 lumineRun.style.display = 'none';

@@ -5,6 +5,9 @@ html {
     background-attachment: fixed;  
     background-size: cover;
 }
+.fullscreen-canvas {
+  display: block;
+}
 /*the fade in and out start button thingy*/
 .title p{
     /* text-align: center; */
