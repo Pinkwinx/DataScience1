@@ -319,149 +319,199 @@ let charbg = [
     'rgba(255, 205, 86, 0.2)'
   ]
   //making new bar graphs
-    new Chart(document.getElementById("barGraph1"), {
+  function createZoomableBarGraph(id, labels, data, backgroundColor) {
+    const originalOptions = {
         type: 'bar',
-        data:{
-            labels: char,
+        data: {
+            labels: labels,
             datasets: [{
-                label: "How many times a 5-character has made an apperance on the featured banner",
-                data: charMode,
-                backgroundColor: charbg,
-                  borderColor: charbg,
-                  borderWidth: 1
+                data: data,
+                backgroundColor: backgroundColor,
+                borderColor: backgroundColor,
+                borderWidth: 1
             }]
         }
-    })
-    new Chart(document.getElementById("barGraph2"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "Total amount a 5-character has made",
-                data: charRev,
-                backgroundColor: charbg,
-                  borderColor: charbg,
-                  borderWidth: 1
-            }]
+    };
+    const toggleZoom = () => {
+        const chart = Chart.getChart(chartElement);
+        const options = chart.options || originalOptions;
+
+        if (!chart.zoomed) {
+            chart.originalOptions = options;
+            chart.options = {
+                ...options,
+                responsive: true,
+                maintainAspectRatio: false,
+                // Additional zoom-in options
+            };
+            chart.update();
+            chart.zoomed = true;
+        } else {
+            chart.options = chart.originalOptions;
+            chart.update();
+            chart.zoomed = false;
         }
-    })
-    new Chart(document.getElementById("tartagliaGraph1"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "How many times Tartaglia has made an apperance on the featured banner",
-                data: charMode,
-                backgroundColor: tartagliabg,
-                  borderColor: tartagliabg,
-                  borderWidth: 1
-            }]
-        }
-    })
-    new Chart(document.getElementById("tartagliaGraph2"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "Total amount Tartaglia has made",
-                data: charRev,
-                backgroundColor: tartagliabg,
-                  borderColor: tartagliabg,
-                  borderWidth: 1
-            }]
-        }
-    })
-    new Chart(document.getElementById("cynoGraph1"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "How many times Cyno has made an apperance on the featured banner",
-                data: charMode,
-                backgroundColor: cynobg,
-                  borderColor: cynobg,
-                  borderWidth: 1
-            }]
-        }
-    })
-    new Chart(document.getElementById("cynoGraph2"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "Total amount Cyno has made",
-                data: charRev,
-                backgroundColor: cynobg,
-                  borderColor: cynobg,
-                  borderWidth: 1
-            }]
-        }
-    })
-    new Chart(document.getElementById("barGraph3"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "Avarage abyss usage rate of all 5-star limited characters in percentage",
-                data: charAbyss,
-                backgroundColor: charbg,
-                  borderColor: charbg,
-                  borderWidth: 1
-            }]
-        }
-    })
-    new Chart(document.getElementById("kazuhaGraph1"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "Avarage abyss usage rate of Kazuha in percentage",
-                data: charAbyss,
-                backgroundColor: kazuhabg,
-                  borderColor: kazuhabg,
-                  borderWidth: 1
-            }]
-        }
-    })
-    new Chart(document.getElementById("kazuhaGraph2"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "Total amount Kazuha has made",
-                data: charRev,
-                backgroundColor: kazuhabg,
-                  borderColor: kazuhabg,
-                  borderWidth: 1
-            }]
-        }
-    })
-    new Chart(document.getElementById("eulaGraph1"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "Avarage abyss usage rate of Eula in percentage",
-                data: charAbyss,
-                backgroundColor: eulabg,
-                  borderColor: eulabg,
-                  borderWidth: 1
-            }]
-        }
-    })
-    new Chart(document.getElementById("eulaGraph2"), {
-        type: 'bar',
-        data:{
-            labels: char,
-            datasets: [{
-                label: "Total amount Eula has made",
-                data: charRev,
-                backgroundColor: eulabg,
-                  borderColor: eulabg,
-                  borderWidth: 1
-            }]
-        }
-    })
+    };
+
+    const chartElement = document.getElementById(id);
+    chartElement.addEventListener('click', toggleZoom);
+
+    return new Chart(chartElement, originalOptions);
+}
+createZoomableBarGraph("barGraph1", char, charMode, charbg);
+createZoomableBarGraph("barGraph2", char, charRev, charbg);
+createZoomableBarGraph("tartagliaGraph1", char, charMode, tartagliabg);
+createZoomableBarGraph("tartagliaGraph2", char, charRev, tartagliabg);
+createZoomableBarGraph("cynoGraph1", char, charMode, cynobg);
+createZoomableBarGraph("cynoGraph2", char, charRev, cynobg);
+createZoomableBarGraph("barGraph3", char, charAbyss, charbg);
+createZoomableBarGraph("kazuhaGraph1", char, charAbyss, kazuhabg);
+createZoomableBarGraph("kazuhaGraph2", char, charRev, kazuhabg);
+createZoomableBarGraph("eulaGraph1", char, charAbyss, eulabg);
+createZoomableBarGraph("eulaGraph2", char, charRev, eulabg);
+    // new Chart(document.getElementById("barGraph1"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "How many times a 5-character has made an apperance on the featured banner",
+    //             data: charMode,
+    //             backgroundColor: charbg,
+    //               borderColor: charbg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("barGraph2"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "Total amount a 5-character has made",
+    //             data: charRev,
+    //             backgroundColor: charbg,
+    //               borderColor: charbg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("tartagliaGraph1"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "How many times Tartaglia has made an apperance on the featured banner",
+    //             data: charMode,
+    //             backgroundColor: tartagliabg,
+    //               borderColor: tartagliabg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("tartagliaGraph2"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "Total amount Tartaglia has made",
+    //             data: charRev,
+    //             backgroundColor: tartagliabg,
+    //               borderColor: tartagliabg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("cynoGraph1"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "How many times Cyno has made an apperance on the featured banner",
+    //             data: charMode,
+    //             backgroundColor: cynobg,
+    //               borderColor: cynobg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("cynoGraph2"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "Total amount Cyno has made",
+    //             data: charRev,
+    //             backgroundColor: cynobg,
+    //               borderColor: cynobg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("barGraph3"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "Avarage abyss usage rate of all 5-star limited characters in percentage",
+    //             data: charAbyss,
+    //             backgroundColor: charbg,
+    //               borderColor: charbg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("kazuhaGraph1"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "Avarage abyss usage rate of Kazuha in percentage",
+    //             data: charAbyss,
+    //             backgroundColor: kazuhabg,
+    //               borderColor: kazuhabg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("kazuhaGraph2"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "Total amount Kazuha has made",
+    //             data: charRev,
+    //             backgroundColor: kazuhabg,
+    //               borderColor: kazuhabg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("eulaGraph1"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "Avarage abyss usage rate of Eula in percentage",
+    //             data: charAbyss,
+    //             backgroundColor: eulabg,
+    //               borderColor: eulabg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
+    // new Chart(document.getElementById("eulaGraph2"), {
+    //     type: 'bar',
+    //     data:{
+    //         labels: char,
+    //         datasets: [{
+    //             label: "Total amount Eula has made",
+    //             data: charRev,
+    //             backgroundColor: eulabg,
+    //               borderColor: eulabg,
+    //               borderWidth: 1
+    //         }]
+    //     }
+    // })
 //add things to html
 lumineIdle.style.display = 'block';
 lumineRun.style.display = 'none';
