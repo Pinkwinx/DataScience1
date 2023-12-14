@@ -225,3 +225,13 @@ html {
     width: 600px;
     height:600px;
 }
+.Lumine-RunR{
+  position: fixed;
+  z-index: 99;
+  /* margin-top: 10vh; */
+  margin-left: 15vh;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 600px;
+  height:600px;
+}
