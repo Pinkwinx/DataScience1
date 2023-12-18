@@ -3,7 +3,15 @@ const container = document.querySelector('.horizontal');
 const imageContainer = document.querySelector('.image-container');
 const lumineIdle = document.querySelector('.Lumine-Idle');
 const lumineRun = document.querySelector('.Lumine-Run');
-
+//if phone is in portrain mode
+window.addEventListener('orientationchange', function() {
+    var portraitMessage = document.querySelector('.portrait-message');
+    if (window.orientation === 0 || window.orientation === 180) {
+      portraitMessage.style.display = 'block';
+    } else {
+      portraitMessage.style.display = 'none';
+    }
+  });
 //button
 document.getElementById("click").onclick = function() {
     const titleDiv = document.querySelector('.title');
@@ -239,6 +247,7 @@ let charbg = [
     'rgba(109, 170, 29, 0.15)',
     'rgba(75, 192, 192, 0.15)',
     'rgba(75, 192, 192, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
     'rgba(153, 102, 255, 0.15)',
     'rgba(54, 162, 235,0.15)',
     'rgba(255, 159, 64, 0.15)',
@@ -267,6 +276,7 @@ let charbg = [
     'rgba(134, 167, 201, 0.15)',
     'rgba(54, 162, 235, 0.15)',
     'rgba(109, 170, 29, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
     'rgba(75, 192, 192, 0.15)',
     'rgba(75, 192, 192, 0.15)',
     'rgba(153, 102, 255, 0.15)',
@@ -299,6 +309,7 @@ let charbg = [
     'rgba(109, 170, 29, 0.15)',
     'rgba(75, 192, 192, 0.15)',
     'rgba(75, 192, 192, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
     'rgba(153, 102, 255, 0.15)',
     'rgba(54, 162, 235,0.15)',
     'rgba(255, 159, 64, 0.15)',
@@ -327,6 +338,7 @@ let charbg = [
     'rgba(134, 167, 201, 0.15)',
     'rgba(54, 162, 235, 0.15)',
     'rgba(109, 170, 29, 0.15)',
+    'rgba(75, 192, 192, 0.15)',
     'rgba(75, 192, 192, 0.15)',
     'rgba(75, 192, 192, 0.15)',
     'rgba(153, 102, 255, 0.15)',
